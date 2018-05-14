@@ -13,6 +13,9 @@
 		0660C72220A9979C00252489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0660C72120A9979C00252489 /* Assets.xcassets */; };
 		0660C72520A9979C00252489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0660C72320A9979C00252489 /* LaunchScreen.storyboard */; };
 		0660C72820A9979C00252489 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0660C72720A9979C00252489 /* main.m */; };
+		0660C73220A998EC00252489 /* MJCenterLargenFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0660C73120A998EC00252489 /* MJCenterLargenFlowLayout.m */; };
+		0660C73D20A9A1FE00252489 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0660C73A20A9A1FE00252489 /* CollectionViewCell.xib */; };
+		0660C73E20A9A1FE00252489 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0660C73C20A9A1FE00252489 /* CollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		0660C72420A9979C00252489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0660C72620A9979C00252489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0660C72720A9979C00252489 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0660C73020A998EC00252489 /* MJCenterLargenFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJCenterLargenFlowLayout.h; sourceTree = "<group>"; };
+		0660C73120A998EC00252489 /* MJCenterLargenFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJCenterLargenFlowLayout.m; sourceTree = "<group>"; };
+		0660C73A20A9A1FE00252489 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		0660C73B20A9A1FE00252489 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		0660C73C20A9A1FE00252489 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +66,15 @@
 		0660C71720A9979A00252489 /* MJCenterLargenFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				0660C72F20A998CE00252489 /* Assets */,
+				0660C72E20A998CE00252489 /* Classes */,
 				0660C71820A9979A00252489 /* AppDelegate.h */,
 				0660C71920A9979A00252489 /* AppDelegate.m */,
 				0660C71B20A9979A00252489 /* ViewController.h */,
 				0660C71C20A9979A00252489 /* ViewController.m */,
+				0660C73B20A9A1FE00252489 /* CollectionViewCell.h */,
+				0660C73C20A9A1FE00252489 /* CollectionViewCell.m */,
+				0660C73A20A9A1FE00252489 /* CollectionViewCell.xib */,
 				0660C71E20A9979A00252489 /* Main.storyboard */,
 				0660C72120A9979C00252489 /* Assets.xcassets */,
 				0660C72320A9979C00252489 /* LaunchScreen.storyboard */,
@@ -70,6 +83,22 @@
 			);
 			path = MJCenterLargenFlowLayout;
 			sourceTree = "<group>";
+		};
+		0660C72E20A998CE00252489 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0660C73020A998EC00252489 /* MJCenterLargenFlowLayout.h */,
+				0660C73120A998EC00252489 /* MJCenterLargenFlowLayout.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		0660C72F20A998CE00252489 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -129,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0660C72520A9979C00252489 /* LaunchScreen.storyboard in Resources */,
+				0660C73D20A9A1FE00252489 /* CollectionViewCell.xib in Resources */,
 				0660C72220A9979C00252489 /* Assets.xcassets in Resources */,
 				0660C72020A9979A00252489 /* Main.storyboard in Resources */,
 			);
@@ -141,8 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0660C73220A998EC00252489 /* MJCenterLargenFlowLayout.m in Sources */,
 				0660C71D20A9979A00252489 /* ViewController.m in Sources */,
 				0660C72820A9979C00252489 /* main.m in Sources */,
+				0660C73E20A9A1FE00252489 /* CollectionViewCell.m in Sources */,
 				0660C71A20A9979A00252489 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
