@@ -1,4 +1,4 @@
-//
+ //
 //  MJCenterLargenFlowLayout.m
 //  MJCenterLargenFlowLayout
 //
@@ -36,12 +36,6 @@
 {
     
     NSArray *arr = [super layoutAttributesForElementsInRect:rect];
-    
-    /*
-     网上的说这里要复制数组，否则会有警告，但是我没复制也没警告也没问题。所以如果出现警告就用这两句
-     NSArray *superArr = [super layoutAttributesForElementsInRect:rect];
-     NSArray *arr = [[NSArray alloc] initWithArray:superArr copyItems:YES];
-     */
     
     // 屏幕中线
     CGFloat centerX = self.collectionView.contentOffset.x + self.collectionView.bounds.size.width / 2.0;
