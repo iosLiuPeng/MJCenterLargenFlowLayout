@@ -54,6 +54,8 @@
 
 //  每次都有图片居中
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
+    // 不用系统的预计停止位置，改用当前collection的偏移量 + 速度，保证一次只能滑一页
+    proposedContentOffset = CGPointMake(self.collectionView.contentOffset.x + velocity.x * 30, 0);
     // 取当前屏幕内显示的cell
     CGRect rect = CGRectMake(proposedContentOffset.x, 0, self.collectionView.bounds.size.width,self.collectionView.bounds.size.height);
     NSArray *attrs = [super layoutAttributesForElementsInRect:rect];
