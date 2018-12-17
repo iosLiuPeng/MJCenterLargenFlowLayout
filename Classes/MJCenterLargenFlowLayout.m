@@ -8,10 +8,6 @@
 
 #import "MJCenterLargenFlowLayout.h"
 
-@interface MJCenterLargenFlowLayout ()
-@property (nonatomic, assign) CGFloat lastOffsetX;///< 上次滑动结束时，x轴偏移量
-@end
-
 @implementation MJCenterLargenFlowLayout
 -(void)prepareLayout {
     // 所有个数
@@ -59,7 +55,7 @@
 //  每次都有图片居中
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
     // 不用系统的预计停止位置，改用当前collection的偏移量 + 速度，保证一次只能滑一页
-    CGRect current = CGRectMake(self.collectionView.contentOffset.y, 0, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
+    CGRect current = CGRectMake(self.collectionView.contentOffset.x, 0, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
     UICollectionViewLayoutAttributes *attr = [super layoutAttributesForElementsInRect:current].firstObject;
     CGFloat itemWidth = attr.size.width;
     
@@ -67,10 +63,10 @@
         // 有一定速度时，才重新估算。
         if (velocity.x > 0) {
             // 向左
-            proposedContentOffset = CGPointMake(_lastOffsetX + itemWidth, 0);
+            proposedContentOffset = CGPointMake(self.collectionView.contentOffset.x + itemWidth / 2, 0);
         } else {
             // 向右
-            proposedContentOffset = CGPointMake(_lastOffsetX - itemWidth, 0);
+            proposedContentOffset = CGPointMake(self.collectionView.contentOffset.x - itemWidth / 2, 0);
         }
     }
 
@@ -108,7 +104,6 @@
         _selectBlock(index);
     }
     
-    _lastOffsetX = proposedContentOffset.x;
     return proposedContentOffset;
 }
 
